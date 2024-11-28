@@ -3,26 +3,29 @@ import { Todos } from "./components/Todos"
 
 const mockTodos = [
   {
-    id: 1,
-    title: 'Todo 1',
+    id: '1',
+    title: 'Ver el Partido de Baloncesto',
     completed: false
   },
   {
-    id: 2,
-    title: 'Todo 2',
-    completed: false
+    id: '2',
+    title: 'Aprender React con TypeScript',
+    completed: true
   },
   {
-    id: 3,
-    title: 'Todo 3',
+    id: '3',
+    title: 'Crear un Proyecto',
     completed: false
   }
 ]
 
-const App: React.FC = () =>  {
+const App = (): JSX.Element =>  {
   const [todos] = useState(mockTodos)
   return (
-    <Todos todos={todos} />
+    <div className="todoapp"> 
+      <Todos todos={todos} />
+    </div>
+    
   )
 }
 
